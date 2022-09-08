@@ -31,8 +31,6 @@ Status StrAssign(String T,char *chars)
 	}
 }
 
-
-
 typedef char TElemType;
 typedef enum {Link,Thread} PointerTag;	/* Link=0表示指向左右孩子指针, */
 										/* Thread=1表示指向前驱或后继的线索 */
