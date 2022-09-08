@@ -31,7 +31,8 @@ Status StrAssign(String T,char *chars)
 	}
 }
 
-typedef int Status;	/* Status是函数的类型,其值是函数结果状态代码,如OK等 */
+
+
 typedef char TElemType;
 typedef enum {Link,Thread} PointerTag;	/* Link=0表示指向左右孩子指针, */
 										/* Thread=1表示指向前驱或后继的线索 */
