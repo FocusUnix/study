@@ -143,12 +143,16 @@ Status InOrderTraverse_Thr(BiThrTree T)
 	{ 						 
 		while (p->LTag == Link)
 			p = p->lchild;
+		
 		if (!visit(p->data)) /* 访问其左子树为空的结点 */
 			return ERROR;
+		puts("#1");
+
 		while (p->RTag == Thread && p->rchild != T)
 		{
 			p = p->rchild;
 			visit(p->data);	 /* 访问后继结点 */
+			puts("#2");
 		}
 		p = p->rchild;
 	}
@@ -158,7 +162,7 @@ Status InOrderTraverse_Thr(BiThrTree T)
 int main()
 {
 	BiThrTree H, T;
-	StrAssign(str, "ABDH#K###E##CFI###G#J##");
+	StrAssign(str, "ABDH##I##EJ###CF##G##");
 	// printf("请按前序输入二叉树(如:'ABDH##I##EJ###CF##G##')\n");
 	CreateBiThrTree(&T);	 /* 按前序产生二叉树 */
 	InOrderThreading(&H, T); /* 中序遍历,并中序线索化二叉树 */
